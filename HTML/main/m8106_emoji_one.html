@@ -102,15 +102,27 @@
         }
 
         /* 🔹 이모지 컨테이너 */
+        /* 기존 grid 스타일을 찾아서 미디어쿼리 추가 */
         .emoji-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: flex-start;
-            grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-            gap: 10px;
-            margin: 20px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            padding: 15px;
         }
 
+        /* 모바일 화면용 미디어쿼리 추가 */
+        @media screen and (max-width: 768px) {
+            .emoji-container {
+                grid-template-columns: repeat(4, 1fr);
+                gap: 10px;
+                padding: 10px;
+            }
+
+            .emoji-category {
+                margin: 10px 5px;
+            }
+        }
+        
         /* 🔹 이모지 개별 아이템 */
         .emoji-item {
             display: flex;
