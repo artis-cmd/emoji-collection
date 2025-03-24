@@ -60,12 +60,11 @@
 
         /* 🔹 검색창 */
         .search-container {
+            width: 380px;  /* 420px에서 380px로 수정 */
+            margin: 20px 20px;
             display: flex;
             justify-content: flex-start;
             align-items: center;
-            width: 100%;
-            max-width: 420px;
-            margin-left: 20px;
             position: relative;
         }
 
@@ -89,7 +88,7 @@
 
         /* 🔹 검색 결과 */
         .search-result-count {
-            width: 100%;
+            width: 380px;  /* 검색창과 동일한 폭으로 맞춤 */
             max-width: 480px;
             margin: 10px 0 10px 20px; /* 왼쪽으로 20px 마진 추가, auto 제거 */
             padding: 8px 12px;
@@ -120,6 +119,11 @@
 
             .emoji-category {
                 margin: 10px 5px;
+            }
+
+            .search-container,
+            .search-result-count {
+                width: 380px;
             }
         }
         
