@@ -170,6 +170,25 @@ html, body {
     }
 }
 
+/* 모바일 화면에서 4개씩 보이도록 설정 */
+@media screen and (max-width: 768px) {
+  .emoji-grid,
+  .emoji-container {  /* m8106용 클래스 추가 */
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .emoji-item {
+    padding: 10px;
+  }
+
+  /* m8106 특정 스타일 조정 */
+  .emoji-category {
+    margin: 10px 5px;
+  }
+}
+
 .popup-message {
     position: fixed;
     bottom: 600px; /* 기존 20px → 80px로 높이 조정 */
